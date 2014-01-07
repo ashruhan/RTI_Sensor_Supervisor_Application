@@ -13,13 +13,14 @@ NDDS_QOS_PROFILES is defined and points to this file.
 For more information about XML QoS Profiles see Chapter 15 in the 
 RTI Connext user manual.
 -->
-<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<!--<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="C:/Program Files (x86)/RTI/ndds.5.0.0/scripts/../resource/rtiddsgen/../qos_profiles_5.0.0/schema/rti_dds_qos_profiles.xsd"
-     version="5.0.0">
+     version="5.0.0">-->
     <!-- QoS Library containing the QoS profile used in the generated example.
 
         A QoS library is a named set of QoS profiles.
     -->
+<dds>
     <qos_library name="DocBox_Library">
         
        <qos_profile name="dim15_MDPnP_Profile" is_default_qos="true">
@@ -77,10 +78,10 @@ RTI Connext user manual.
           <!-- Let DDS handle heartbeats -->
           <kind>DDS_AUTOMATIC_LIVELINESS_QOS</kind>
           <!-- Point at which writers (and associated instances) become "not alive" -->
-          <lease_duration>
+         <!-- <lease_duration>
             <sec>2</sec>
             <nanosec>0</nanosec>
-          </lease_duration>
+          </lease_duration>-->
         </liveliness>
         <durability>
           <!-- Writer is responsible for maintaining transient copies of samples
@@ -91,12 +92,12 @@ RTI Connext user manual.
         </durability>
         <reliability>
           <kind>RELIABLE_RELIABILITY_QOS</kind>
-          <max_blocking_time>
+          <!--<max_blocking_time>
             <sec>5</sec>
             <nanosec>0</nanosec>
-          </max_blocking_time>
-          <acknowledgment_kind>DDS_PROTOCOL_ACKNOWLEDGMENT_MODE
-          </acknowledgment_kind>
+          </max_blocking_time>-->
+        <!--  <acknowledgment_kind>DDS_PROTOCOL_ACKNOWLEDGMENT_MODE
+          </acknowledgment_kind>-->
         </reliability>
         <history>
           <!-- samples kept in the writer ... see durability -->
@@ -121,10 +122,10 @@ RTI Connext user manual.
           <kind>DDS_AUTOMATIC_LIVELINESS_QOS</kind>
           <!-- Point at which writers (and associated exclusively owned instances)
             become "not alive" -->
-          <lease_duration>
+         <!-- <lease_duration>
             <sec>2</sec>
             <nanosec>0</nanosec>
-          </lease_duration>
+          </lease_duration>-->
         </liveliness>
         <durability>
           <!-- Writer is responsible for maintaining transient copies of samples
@@ -135,12 +136,12 @@ RTI Connext user manual.
         </durability>
         <reliability>
           <kind>RELIABLE_RELIABILITY_QOS</kind>
-          <max_blocking_time>
+        <!--  <max_blocking_time>
             <sec>3</sec>
             <nanosec>0</nanosec>
-          </max_blocking_time>
-          <acknowledgment_kind>DDS_PROTOCOL_ACKNOWLEDGMENT_MODE
-          </acknowledgment_kind>
+          </max_blocking_time>-->
+          <!--<acknowledgment_kind>DDS_PROTOCOL_ACKNOWLEDGMENT_MODE
+          </acknowledgment_kind>-->
         </reliability>
         <history>
           <kind>KEEP_LAST_HISTORY_QOS</kind>

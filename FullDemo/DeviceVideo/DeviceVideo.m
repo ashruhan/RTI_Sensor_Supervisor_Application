@@ -9,8 +9,6 @@ dp.Subscribers(1).Readers(1).ReadTake = ReadMethodType.TAKE;
 
 dp.addWriter('DIMT_NumericObsVal', 'DIMT_NumericObsValTopic'); 
 
-assignin('base','VideoFrame',DIMT_NumericObsVal());
-
 %% Setting up timer 
 
 %Digital Voltage stream sampling @ 2KHz

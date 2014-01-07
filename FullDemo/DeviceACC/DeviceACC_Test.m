@@ -7,11 +7,7 @@ dp = DDS.DomainParticipant(...
 dp.addReader('SensorADCVoltage','Example SensorADCVoltage');
 dp.Subscribers(1).Readers(1).ReadTake = ReadMethodType.TAKE;
 
-dp.addWriter('DIMT_NumericObsVal', 'DIMT_NumericObsValTopic'); 
-
-assignin('base','aX',DIMT_NumericObsVal());
-assignin('base','aY',DIMT_NumericObsVal());
-assignin('base','aZ',DIMT_NumericObsVal());
+dp.addWriter('DIMT_NumericObsVal', 'DIMT_NumericObsValTopic');
 
 %% Setting up timer 
 
